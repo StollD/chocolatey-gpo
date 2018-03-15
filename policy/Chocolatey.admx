@@ -1,0 +1,374 @@
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="fullarmor" namespace="FullArmor.Policies.1099AFAE_448B_4E3C_8D33_D1A8E699384B" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="" />
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB" displayName="$(string.CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB)" />
+    <category name="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" displayName="$(string.CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C)">
+      <parentCategory ref="CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB" />
+    </category>
+    <category name="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" displayName="$(string.CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0)">
+      <parentCategory ref="CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB" />
+    </category>
+  </categories>
+  <policies>
+    <policy name="POL_04641CDE_6340_4EC5_9D9F_3D683B95D910" class="Machine" displayName="$(string.POL_04641CDE_6340_4EC5_9D9F_3D683B95D910)" explainText="$(string.POL_04641CDE_6340_4EC5_9D9F_3D683B95D910_Help)" presentation="$(presentation.POL_04641CDE_6340_4EC5_9D9F_3D683B95D910)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="cacheLocationMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <text id="TXT_52F13D93_BB52_4DE3_AAF7_268E42CDF3AD" key="SOFTWARE\Policies\Chocolatey\Config" valueName="cacheLocation" />
+      </elements>
+    </policy>
+    <policy name="POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7" class="Machine" displayName="$(string.POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7)" explainText="$(string.POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7_Help)" presentation="$(presentation.POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="containsLegacyPackageInstallsMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <enabledList>
+        <item key="SOFTWARE\Policies\Chocolatey\Config" valueName="containsLegacyPackageInstalls">
+          <value>
+            <string>true</string>
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="SOFTWARE\Policies\Chocolatey\Config" valueName="containsLegacyPackageInstalls">
+          <value>
+            <string>false</string>
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+    <policy name="POL_E1ADC007_7D1E_455E_B699_212CA82C4369" class="Machine" displayName="$(string.POL_E1ADC007_7D1E_455E_B699_212CA82C4369)" explainText="$(string.POL_E1ADC007_7D1E_455E_B699_212CA82C4369_Help)" presentation="$(presentation.POL_E1ADC007_7D1E_455E_B699_212CA82C4369)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="commandExecutionTimeoutSecondsMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <decimal id="DXT_1F7F73E6_145A_4948_93EF_905F040C194D" key="SOFTWARE\Policies\Chocolatey\Config" valueName="commandExecutionTimeoutSeconds" required="true" storeAsText="true" />
+      </elements>
+    </policy>
+    <policy name="POL_F535E5A2_6CF3_42B3_A4AA_8642E5B77FF8" class="Machine" displayName="$(string.POL_F535E5A2_6CF3_42B3_A4AA_8642E5B77FF8)" explainText="$(string.POL_F535E5A2_6CF3_42B3_A4AA_8642E5B77FF8_Help)" presentation="$(presentation.POL_F535E5A2_6CF3_42B3_A4AA_8642E5B77FF8)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="webRequestTimeoutSecondsMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <decimal id="DXT_EA3481A2_FDFE_40A1_8959_9272451A4BCD" key="SOFTWARE\Policies\Chocolatey\Config" valueName="webRequestTimeoutSeconds" required="true" storeAsText="true" />
+      </elements>
+    </policy>
+    <policy name="POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1" class="Machine" displayName="$(string.POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1)" explainText="$(string.POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1_Help)" presentation="$(presentation.POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <text id="TXT_8C272632_AA5F_4C90_A8FD_577F0E08E284" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxy" />
+      </elements>
+    </policy>
+    <policy name="POL_E2092EEB_3721_45E3_98CE_093F1E5E5417" class="Machine" displayName="$(string.POL_E2092EEB_3721_45E3_98CE_093F1E5E5417)" explainText="$(string.POL_E2092EEB_3721_45E3_98CE_093F1E5E5417_Help)" presentation="$(presentation.POL_E2092EEB_3721_45E3_98CE_093F1E5E5417)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyUserMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <text id="TXT_119F1456_D2C8_4366_9EFA_7DF1C246BA0E" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyUser" />
+      </elements>
+    </policy>
+    <policy name="POL_D9A23E1F_EB00_4363_9128_141C773B5114" class="Machine" displayName="$(string.POL_D9A23E1F_EB00_4363_9128_141C773B5114)" explainText="$(string.POL_D9A23E1F_EB00_4363_9128_141C773B5114_Help)" presentation="$(presentation.POL_D9A23E1F_EB00_4363_9128_141C773B5114)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyPasswordMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <text id="TXT_624F7F2C_31D5_4114_B2A2_195B3FA5FAE3" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyPassword" />
+      </elements>
+    </policy>
+    <policy name="POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3" class="Machine" displayName="$(string.POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3)" explainText="$(string.POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3_Help)" presentation="$(presentation.POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyBypassListMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <text id="TXT_BBD1800E_5205_4D83_B5EF_3927D17C47AE" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyBypassList" />
+      </elements>
+    </policy>
+    <policy name="POL_2EAA9334_76FD_4330_8236_6D8FDA359589" class="Machine" displayName="$(string.POL_2EAA9334_76FD_4330_8236_6D8FDA359589)" key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyBypassOnLocalMode">
+      <parentCategory ref="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <enabledList>
+        <item key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyBypassOnLocal">
+          <value>
+            <string>true</string>
+          </value>
+        </item>
+      </enabledList>
+      <disabledList>
+        <item key="SOFTWARE\Policies\Chocolatey\Config" valueName="proxyBypassOnLocal">
+          <value>
+            <string>false</string>
+          </value>
+        </item>
+      </disabledList>
+    </policy>
+    <policy name="POL_28122B42_A3BC_4D04_AA6F_4E455997DAB7" class="Machine" displayName="$(string.POL_28122B42_A3BC_4D04_AA6F_4E455997DAB7)" explainText="$(string.POL_28122B42_A3BC_4D04_AA6F_4E455997DAB7_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="autoUninstaller">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_5FDC8C79_A6F1_465C_8A32_B8FFCB71D49C" class="Machine" displayName="$(string.POL_5FDC8C79_A6F1_465C_8A32_B8FFCB71D49C)" explainText="$(string.POL_5FDC8C79_A6F1_465C_8A32_B8FFCB71D49C_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="failOnAutoUninstaller">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_E443EC51_D174_45B2_B258_5B2414C45CDE" class="Machine" displayName="$(string.POL_E443EC51_D174_45B2_B258_5B2414C45CDE)" explainText="$(string.POL_E443EC51_D174_45B2_B258_5B2414C45CDE_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="powershellHost">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_5FDFA1C8_D017_48A3_B237_E769E2E2311D" class="Machine" displayName="$(string.POL_5FDFA1C8_D017_48A3_B237_E769E2E2311D)" explainText="$(string.POL_5FDFA1C8_D017_48A3_B237_E769E2E2311D_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="logEnvironmentValues">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_8F4D7428_86D7_44CF_8F7D_5D550771549C" class="Machine" displayName="$(string.POL_8F4D7428_86D7_44CF_8F7D_5D550771549C)" explainText="$(string.POL_8F4D7428_86D7_44CF_8F7D_5D550771549C_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="ignoreInvalidOptionsSwitches">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_E02D6F54_87ED_45DF_83FE_E6E9286A39FD" class="Machine" displayName="$(string.POL_E02D6F54_87ED_45DF_83FE_E6E9286A39FD)" explainText="$(string.POL_E02D6F54_87ED_45DF_83FE_E6E9286A39FD_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="usePackageExitCodes">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_FE3786E3_BEF9_4EAE_B654_F58D78AFD24C" class="Machine" displayName="$(string.POL_FE3786E3_BEF9_4EAE_B654_F58D78AFD24C)" explainText="$(string.POL_FE3786E3_BEF9_4EAE_B654_F58D78AFD24C_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="showNonElevatedWarnings">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_4A53D447_40DA_4AFA_8F0C_B558C4075C35" class="Machine" displayName="$(string.POL_4A53D447_40DA_4AFA_8F0C_B558C4075C35)" explainText="$(string.POL_4A53D447_40DA_4AFA_8F0C_B558C4075C35_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="showDownloadProgress">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_0640D1F0_5626_4D1C_BD0F_6AE7FE7A7347" class="Machine" displayName="$(string.POL_0640D1F0_5626_4D1C_BD0F_6AE7FE7A7347)" explainText="$(string.POL_0640D1F0_5626_4D1C_BD0F_6AE7FE7A7347_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="stopOnFirstPackageFailure">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_4FE42F34_F446_4DAC_8E69_34CB96C54C27" class="Machine" displayName="$(string.POL_4FE42F34_F446_4DAC_8E69_34CB96C54C27)" explainText="$(string.POL_4FE42F34_F446_4DAC_8E69_34CB96C54C27_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="useRememberedArgumentsForUpgrades">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_31589AA3_448A_4E50_85D0_AA28ABD5C32E" class="Machine" displayName="$(string.POL_31589AA3_448A_4E50_85D0_AA28ABD5C32E)" explainText="$(string.POL_31589AA3_448A_4E50_85D0_AA28ABD5C32E_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="allowGlobalConfirmation">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_34CAA648_D256_4124_8EAA_809EED815F28" class="Machine" displayName="$(string.POL_34CAA648_D256_4124_8EAA_809EED815F28)" explainText="$(string.POL_34CAA648_D256_4124_8EAA_809EED815F28_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="useFipsCompliantChecksums">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_4CBBDE1D_BEDD_468A_BA0F_2B141AC622C9" class="Machine" displayName="$(string.POL_4CBBDE1D_BEDD_468A_BA0F_2B141AC622C9)" explainText="$(string.POL_4CBBDE1D_BEDD_468A_BA0F_2B141AC622C9_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="checksumFiles">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_98CF77F3_977B_4DBE_9F81_4D7B8EC5A92F" class="Machine" displayName="$(string.POL_98CF77F3_977B_4DBE_9F81_4D7B8EC5A92F)" explainText="$(string.POL_98CF77F3_977B_4DBE_9F81_4D7B8EC5A92F_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="allowEmptyChecksums">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_C30854EC_592E_4A38_9C21_A5AE63D29384" class="Machine" displayName="$(string.POL_C30854EC_592E_4A38_9C21_A5AE63D29384)" explainText="$(string.POL_C30854EC_592E_4A38_9C21_A5AE63D29384_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="allowEmptyChecksumsSecure">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_912CEBD7_A1AA_4360_8AD3_1F1AD007D4BD" class="Machine" displayName="$(string.POL_912CEBD7_A1AA_4360_8AD3_1F1AD007D4BD)" explainText="$(string.POL_912CEBD7_A1AA_4360_8AD3_1F1AD007D4BD_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="failOnStandardError">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_BA586564_1EE7_4862_AA32_87580D6D35E8" class="Machine" displayName="$(string.POL_BA586564_1EE7_4862_AA32_87580D6D35E8)" explainText="$(string.POL_BA586564_1EE7_4862_AA32_87580D6D35E8_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="failOnInvalidOrMissingLicense">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_017E5AA9_3286_4817_83EF_EEED22A1A0E7" class="Machine" displayName="$(string.POL_017E5AA9_3286_4817_83EF_EEED22A1A0E7)" explainText="$(string.POL_017E5AA9_3286_4817_83EF_EEED22A1A0E7_Help)" key="SOFTWARE\Policies\Chocolatey\Features" valueName="scriptsCheckLastExitCode">
+      <parentCategory ref="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+    <policy name="POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C" class="Machine" displayName="$(string.POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C)" explainText="$(string.POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C_Help)" presentation="$(presentation.POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C)" key="SOFTWARE\Policies\Chocolatey" valueName="sources">
+      <parentCategory ref="CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <list id="LST_AFC8AE71_01B2_4933_ACA4_AE961CAE6AFA" key="SOFTWARE\Policies\Chocolatey\Sources" valueName="sources" explicitValue="true" />
+      </elements>
+    </policy>
+    <policy name="POL_E6C688E9_84FD_4B75_AA16_00A857181126" class="Machine" displayName="$(string.POL_E6C688E9_84FD_4B75_AA16_00A857181126)" explainText="$(string.POL_E6C688E9_84FD_4B75_AA16_00A857181126_Help)" presentation="$(presentation.POL_E6C688E9_84FD_4B75_AA16_00A857181126)" key="SOFTWARE\Policies\Chocolatey" valueName="packages">
+      <parentCategory ref="CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+      <elements>
+        <list id="LST_325F1B41_010E_49AD_8F34_33F5907AD5D5" key="SOFTWARE\Policies\Chocolatey\Packages" valueName="packages" additive="true" explicitValue="true" />
+      </elements>
+    </policy>
+    <policy name="POL_C1BF0B2F_43A9_485E_947A_0E63664D7A2E" class="Machine" displayName="$(string.POL_C1BF0B2F_43A9_485E_947A_0E63664D7A2E)" explainText="$(string.POL_C1BF0B2F_43A9_485E_947A_0E63664D7A2E_Help)" key="SOFTWARE\Policies\Chocolatey" valueName="installUpdates">
+      <parentCategory ref="CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
+  </policies>
+</policyDefinitions>

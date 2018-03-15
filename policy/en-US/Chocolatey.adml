@@ -1,0 +1,123 @@
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>
+  </displayName>
+  <description>
+  </description>
+  <resources>
+    <stringTable>
+      <string id="CAT_0BEF8390_1492_42D3_8A83_41B24652EAFB">Chocolatey</string>
+      <string id="CAT_76CE56E6_2105_4101_A64B_69BEB7F8565C">Config</string>
+      <string id="POL_04641CDE_6340_4EC5_9D9F_3D683B95D910">Cache Location</string>
+      <string id="POL_04641CDE_6340_4EC5_9D9F_3D683B95D910_Help">Cache location if not TEMP folder. Replaces $env:TEMP value.</string>
+      <string id="POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7">Contains Legacy Package Installs</string>
+      <string id="POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7_Help">Install has packages installed prior to 0.9.9 series.</string>
+      <string id="POL_E1ADC007_7D1E_455E_B699_212CA82C4369">Command Execution Timeout</string>
+      <string id="POL_E1ADC007_7D1E_455E_B699_212CA82C4369_Help">Default timeout for command execution. '0' for infinite (starting in 0.10.4).</string>
+      <string id="POL_F535E5A2_6CF3_42B3_A4AA_8642E5B77FF8">Web Request Timeout</string>
+      <string id="POL_F535E5A2_6CF3_42B3_A4AA_8642E5B77FF8_Help">Default timeout for web requests. Available in 0.9.10+.</string>
+      <string id="POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1">Proxy</string>
+      <string id="POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1_Help">Explicit proxy location. Available in 0.9.9.9+.</string>
+      <string id="POL_E2092EEB_3721_45E3_98CE_093F1E5E5417">Proxy User</string>
+      <string id="POL_E2092EEB_3721_45E3_98CE_093F1E5E5417_Help">Optional proxy user. Available in 0.9.9.9+.</string>
+      <string id="POL_D9A23E1F_EB00_4363_9128_141C773B5114">Proxy Password</string>
+      <string id="POL_D9A23E1F_EB00_4363_9128_141C773B5114_Help">Optional proxy password. Encrypted. Available in 0.9.9.9+.</string>
+      <string id="POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3">Proxy Bypass List</string>
+      <string id="POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3_Help">Optional proxy bypass list. Comma separated. Available in 0.10.4+.</string>
+      <string id="POL_2EAA9334_76FD_4330_8236_6D8FDA359589">Proxy Bypass On Local</string>
+      <string id="CAT_3A92C7BA_E821_4E6D_9DEA_E41C9AC10DC0">Features</string>
+      <string id="POL_28122B42_A3BC_4D04_AA6F_4E455997DAB7">Auto Uninstaller</string>
+      <string id="POL_28122B42_A3BC_4D04_AA6F_4E455997DAB7_Help">Uninstall from programs and features without requiring an explicit uninstall script.</string>
+      <string id="POL_5FDC8C79_A6F1_465C_8A32_B8FFCB71D49C">Fail on Auto Uninstaller</string>
+      <string id="POL_E443EC51_D174_45B2_B258_5B2414C45CDE">Powershell Host</string>
+      <string id="POL_5FDFA1C8_D017_48A3_B237_E769E2E2311D">Log Environment Values</string>
+      <string id="POL_8F4D7428_86D7_44CF_8F7D_5D550771549C">Ignore Invalid Options/Switches</string>
+      <string id="POL_E02D6F54_87ED_45DF_83FE_E6E9286A39FD">Use Package Exit Codes</string>
+      <string id="POL_FE3786E3_BEF9_4EAE_B654_F58D78AFD24C">Show Non-Elevated Warnings</string>
+      <string id="POL_4A53D447_40DA_4AFA_8F0C_B558C4075C35">Show Download Progress</string>
+      <string id="POL_0640D1F0_5626_4D1C_BD0F_6AE7FE7A7347">Stop on First Package Failure</string>
+      <string id="POL_4FE42F34_F446_4DAC_8E69_34CB96C54C27">Use Remembered Arguments for Upgrades</string>
+      <string id="POL_31589AA3_448A_4E50_85D0_AA28ABD5C32E">Allow Global Confirmation</string>
+      <string id="POL_34CAA648_D256_4124_8EAA_809EED815F28">Use FIPS compilant Checksums</string>
+      <string id="POL_4CBBDE1D_BEDD_468A_BA0F_2B141AC622C9">Checksum Files</string>
+      <string id="POL_98CF77F3_977B_4DBE_9F81_4D7B8EC5A92F">Allow empty Checksums</string>
+      <string id="POL_C30854EC_592E_4A38_9C21_A5AE63D29384">Allow empty Checksums (secure)</string>
+      <string id="POL_912CEBD7_A1AA_4360_8AD3_1F1AD007D4BD">Fail on Standard Error</string>
+      <string id="POL_BA586564_1EE7_4862_AA32_87580D6D35E8">Fail on invalid or missing License</string>
+      <string id="POL_017E5AA9_3286_4817_83EF_EEED22A1A0E7">Scripts check last Exit Code</string>
+      <string id="POL_5FDC8C79_A6F1_465C_8A32_B8FFCB71D49C_Help">Fail if automatic uninstaller fails.</string>
+      <string id="POL_E443EC51_D174_45B2_B258_5B2414C45CDE_Help">Use Chocolatey's built-in PowerShell host. Available in 0.9.10+.</string>
+      <string id="POL_5FDFA1C8_D017_48A3_B237_E769E2E2311D_Help">Log Environment Values - will log values of environment before and after install (could disclose sensitive data). Available in 0.9.10+.</string>
+      <string id="POL_8F4D7428_86D7_44CF_8F7D_5D550771549C_Help">Ignore Invalid Options/Switches - If a switch or option is passed that is not recognized, should choco fail? Available in 0.9.10+.</string>
+      <string id="POL_E02D6F54_87ED_45DF_83FE_E6E9286A39FD_Help">Use Package Exit Codes - Package scripts can provide exit codes. With this on, package exit codes will be what choco uses for exit when non-zero (this value can come from a dependency package). 
+Chocolatey defines valid exit codes as 0, 1605, 1614, 1641, 3010. With this feature off, choco will exit with a 0 or a 1 (matching previous behavior). Available in 0.9.10+.</string>
+      <string id="POL_FE3786E3_BEF9_4EAE_B654_F58D78AFD24C_Help">Show Non-Elevated Warnings - Display non-elevated warnings. Available in 0.10.4+.</string>
+      <string id="POL_4A53D447_40DA_4AFA_8F0C_B558C4075C35_Help">Show Download Progress - Show download progress percentages in the CLI. Available in 0.10.4+.</string>
+      <string id="POL_0640D1F0_5626_4D1C_BD0F_6AE7FE7A7347_Help">Stop On First Package Failure - stop running install, upgrade or uninstall on first package failure instead of continuing with others. As this will affect upgrade all, it is normally recommended to leave this off. Available in 0.10.4+.</string>
+      <string id="POL_4FE42F34_F446_4DAC_8E69_34CB96C54C27_Help">Use Remembered Arguments For Upgrades - when running upgrades, use arguments for upgrade that were used for installation ('remembered'). This is helpful when running upgrade for all packages. Available in 0.10.4+. This is considered in preview for 0.10.4 and will be flipped to on by default in a future release.</string>
+      <string id="POL_31589AA3_448A_4E50_85D0_AA28ABD5C32E_Help">Prompt for confirmation in scripts or bypass.</string>
+      <string id="POL_34CAA648_D256_4124_8EAA_809EED815F28_Help">Use FIPS Compliant Checksums - Ensure checksumming done by choco uses FIPS compliant algorithms. Not recommended unless required by FIPS Mode. Enabling on an existing installation could have unintended consequences related to upgrades/uninstalls. Available in 0.9.10+.</string>
+      <string id="POL_4CBBDE1D_BEDD_468A_BA0F_2B141AC622C9_Help">Checksum files when pulled in from internet (based on package).</string>
+      <string id="POL_98CF77F3_977B_4DBE_9F81_4D7B8EC5A92F_Help">Allow packages to have empty/missing checksums for downloaded resources from non-secure locations (HTTP, FTP). Enabling is not recommended if using sources that download resources from the internet. Available in 0.10.0+.</string>
+      <string id="POL_C30854EC_592E_4A38_9C21_A5AE63D29384_Help">Allow packages to have empty/missing checksums for downloaded resources from secure locations (HTTPS). Available in 0.10.0+.</string>
+      <string id="POL_912CEBD7_A1AA_4360_8AD3_1F1AD007D4BD_Help">Fail if install provider writes to stderr. Available in 0.9.10+.</string>
+      <string id="POL_BA586564_1EE7_4862_AA32_87580D6D35E8_Help">Fail On Invalid Or Missing License - allows knowing when a license is expired or not applied to a machine. Available in 0.9.10+.</string>
+      <string id="POL_017E5AA9_3286_4817_83EF_EEED22A1A0E7_Help">Scripts Check $LastExitCode (external commands) - Leave this off unless you absolutely need it while you fix your package scripts to use throw 'error message' or Set-PowerShellExitCode # instead of exit #. This behavior started in 0.9.10 and produced hard to find bugs. If the last external process exits successfully but with an exit code of not zero, this could cause hard to detect package failures. Available in 0.10.3+. Will be removed in 0.11.0.</string>
+      <string id="POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C">Chocolatey Sources</string>
+      <string id="POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C_Help">Adds custom chocolatey package sources to the configuration.</string>
+      <string id="POL_E6C688E9_84FD_4B75_AA16_00A857181126">Chocolatey Packages</string>
+      <string id="POL_E6C688E9_84FD_4B75_AA16_00A857181126_Help">Configures the packages installed by chocolatey.</string>
+      <string id="POL_C1BF0B2F_43A9_485E_947A_0E63664D7A2E">Install Windows Updates</string>
+      <string id="POL_C1BF0B2F_43A9_485E_947A_0E63664D7A2E_Help">Whether Chocolatey should also install recent windows updates.</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="POL_04641CDE_6340_4EC5_9D9F_3D683B95D910">
+        <textBox refId="TXT_52F13D93_BB52_4DE3_AAF7_268E42CDF3AD">
+          <label>Path</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7" />
+      <presentation id="POL_E1ADC007_7D1E_455E_B699_212CA82C4369">
+        <decimalTextBox refId="DXT_1F7F73E6_145A_4948_93EF_905F040C194D" defaultValue="2700">Seconds</decimalTextBox>
+      </presentation>
+      <presentation id="POL_F535E5A2_6CF3_42B3_A4AA_8642E5B77FF8">
+        <decimalTextBox refId="DXT_EA3481A2_FDFE_40A1_8959_9272451A4BCD" defaultValue="45">Seconds</decimalTextBox>
+      </presentation>
+      <presentation id="POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1">
+        <textBox refId="TXT_8C272632_AA5F_4C90_A8FD_577F0E08E284">
+          <label>Proxy Settings</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_E2092EEB_3721_45E3_98CE_093F1E5E5417">
+        <textBox refId="TXT_119F1456_D2C8_4366_9EFA_7DF1C246BA0E">
+          <label>Username</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_D9A23E1F_EB00_4363_9128_141C773B5114">
+        <textBox refId="TXT_624F7F2C_31D5_4114_B2A2_195B3FA5FAE3">
+          <label>Password</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3">
+        <textBox refId="TXT_BBD1800E_5205_4D83_B5EF_3927D17C47AE">
+          <label>Bypass List</label>
+          <defaultValue>
+          </defaultValue>
+        </textBox>
+      </presentation>
+      <presentation id="POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C">
+        <listBox refId="LST_AFC8AE71_01B2_4933_ACA4_AE961CAE6AFA">Add custom chocolatey sources (key: name, value: path). Set value to 'remove' to remove the source.</listBox>
+      </presentation>
+      <presentation id="POL_E6C688E9_84FD_4B75_AA16_00A857181126">
+        <listBox refId="LST_325F1B41_010E_49AD_8F34_33F5907AD5D5">Install chocolatey packages. (key: package name, value: additional arguments.) Set value to 'remove' to uninstall the package.</listBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
