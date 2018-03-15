@@ -73,7 +73,8 @@ Chocolatey defines valid exit codes as 0, 1605, 1614, 1641, 3010. With this feat
       <presentation id="POL_04641CDE_6340_4EC5_9D9F_3D683B95D910">
         <textBox refId="TXT_52F13D93_BB52_4DE3_AAF7_268E42CDF3AD">
           <label>Path</label>
-          <defaultValue></defaultValue>
+          <defaultValue>
+          </defaultValue>
         </textBox>
       </presentation>
       <presentation id="POL_2E3D1DA2_0852_48E4_B7D6_A37CF45C6EA7" />
@@ -86,25 +87,29 @@ Chocolatey defines valid exit codes as 0, 1605, 1614, 1641, 3010. With this feat
       <presentation id="POL_9BA09321_E14B_4EF5_8B1E_3C7AE5517AD1">
         <textBox refId="TXT_8C272632_AA5F_4C90_A8FD_577F0E08E284">
           <label>Proxy Settings</label>
-          <defaultValue></defaultValue>
+          <defaultValue>
+          </defaultValue>
         </textBox>
       </presentation>
       <presentation id="POL_E2092EEB_3721_45E3_98CE_093F1E5E5417">
         <textBox refId="TXT_119F1456_D2C8_4366_9EFA_7DF1C246BA0E">
           <label>Username</label>
-          <defaultValue></defaultValue>
+          <defaultValue>
+          </defaultValue>
         </textBox>
       </presentation>
       <presentation id="POL_D9A23E1F_EB00_4363_9128_141C773B5114">
         <textBox refId="TXT_624F7F2C_31D5_4114_B2A2_195B3FA5FAE3">
           <label>Password</label>
-          <defaultValue></defaultValue>
+          <defaultValue>
+          </defaultValue>
         </textBox>
       </presentation>
       <presentation id="POL_5E57E002_FE60_45F7_BA2A_98680AF0FAC3">
         <textBox refId="TXT_BBD1800E_5205_4D83_B5EF_3927D17C47AE">
           <label>Bypass List</label>
-          <defaultValue></defaultValue>
+          <defaultValue>
+          </defaultValue>
         </textBox>
       </presentation>
       <presentation id="POL_F3216D74_2FC3_4D1E_B5F2_CEA3450ECF0C">

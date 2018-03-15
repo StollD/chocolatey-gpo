@@ -20,9 +20,6 @@ function Get-RegValues([String] $KeyPath) {
         $_.Name
     }
 }
-function Call-CMD([String] $command) {
-    return cmd.exe /C $command
-}
 
 #region Window Overlay
 
@@ -333,34 +330,47 @@ if (Test-Path "C:\Users\Public\Desktop\Boxstarter Shell.lnk") {
 
 #region Install Updates
 
-Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey" | ForEach-Object {
-    if ($_ -eq "installUpdates") {
-        $mode = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey" $_
-        if ($mode -eq 1) {
-            Display-StatusMessage "Installing Windows Updates..."
-            Install-WindowsUpdate -Full -AcceptEula -SupressReboots
+# Does the registry key exist?
+if (Test-Path "HKLM:\SOFTWARE\Policies\Chocolatey") {
+    
+    # Iterate over all values and try to find the one we need
+    Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey" | ForEach-Object {
+    
+        # Whether Chocolatey/Boxstarter should download windows updates in the background
+        if ($_ -eq "installUpdates") {
+            $mode = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey" $_
+            if ($mode -eq 1) {
+                Display-StatusMessage "Installing Windows Updates..."
+                Start-Job -ScriptBlock { Install-WindowsUpdate -Full -AcceptEula -SupressReboots }
+            }
         }
     }
 }
-Update-ExecutionPolicy Unrestricted
 
 #endregion
 
 #region Apply Config
 
 Display-StatusMessage "Configuring Chocolatey..."
-Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Config" | ForEach-Object {
-    if (!($_ -match ".+?Mode$")) {
-        $value = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Config" $_
-        $mode = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Config" ($_ + "Mode")
-        
-        if ($mode -eq 1) {
-            # set
-            Call-CMD "choco config set --name $_ --value $value"
-        }
-        else {
-            # unset
-            Call-CMD "choco config unset --name $_"
+
+# Does the registry key exist?
+if (Test-Path "HKLM:\SOFTWARE\Policies\Chocolatey\Config") {
+
+    # Iterate over all values
+    Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Config" | ForEach-Object {
+    
+        # Get all values that end with "Mode"
+        if ($_ -match ".+?Mode$") {
+            $value = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Config" $_.Replace("Mode", "")
+            $mode = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Config" $_
+            
+            if ($mode -eq 1) {
+                # set
+                choco config set --name $_ --value $value
+            } else {
+                # unset
+                choco config unset --name $_
+            }
         }
     }
 }
@@ -370,16 +380,23 @@ Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Config" | ForEach-Object {
 #region Apply Features
 
 Display-StatusMessage "Configuring Chocolatey Features..."
-Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Features" | ForEach-Object { 
-    $mode = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Features" $_
+
+# Does the registry key exist?
+if (Test-Path "HKLM:\SOFTWARE\Policies\Chocolatey\Features") {
+
+    # Iterate over all values
+    Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Features" | ForEach-Object { 
     
-    if ($mode -eq 1) {
-        # enable
-        Call-CMD "choco feature enable --name $_"
-    }
-    elseif ($mode -eq 0) {
-        # disable
-        Call-CMD "choco feature disable --name $_"
+        # Is the feature enabled or disabled?
+        $mode = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Features" $_
+        
+        if ($mode -eq 1) {
+            # enable
+            choco feature enable --name $_
+        } elseif ($mode -eq 0) {
+            # disable
+            choco feature disable --name $_
+        }
     }
 }
 
@@ -388,13 +405,22 @@ Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Features" | ForEach-Object {
 #region Package Sources
 
 Display-StatusMessage "Configuring Chocolatey Sources..."
-Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Sources" | ForEach-Object {
-    $value = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Sources" $_
-    if ($value -eq "remove") {
-        Call-CMD "choco sources remove -n $_"
-    }
-    else {
-        Call-CMD "choco sources add -n $_ -s $value"
+
+# Does the registry key exist?
+if (Test-Path "HKLM:\SOFTWARE\Policies\Chocolatey\Sources") {
+
+    # Iterate over all values
+    Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Sources" | ForEach-Object {
+    
+        # Get the source
+        $value = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Sources" $_
+        
+        # Remove or add it
+        if ($value -eq "remove") {
+            choco sources remove -n $_
+        } else {
+            choco sources add -n $_ -s $value
+        }
     }
 }
 
@@ -402,22 +428,38 @@ Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Sources" | ForEach-Object {
 
 #region Install Packages
 
-Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Packages" | ForEach-Object {
-    $params = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Packages" $_
-    $packageList = Call-CMD "choco list --local-only"
-    if ($params -eq "remove") {
-        if ($packageList -match $_ + " ") {
-            Display-StatusMessage "Removing $_..."
-            Call-CMD "cuninst $_ -y"
-        }
-    }
-    else {
-        if (!($packageList -match $_ + " ")) {
-            Display-StatusMessage "Installing $_..."
-            Call-CMD "cinst $_ -y $params"
+# Does the registry key exist?
+if (Test-Path "HKLM:\SOFTWARE\Policies\Chocolatey\Packages") {
+
+    # Iterate over all values
+    Get-RegValues "HKLM:\SOFTWARE\Policies\Chocolatey\Packages" | ForEach-Object {
+    
+        # Get the commandline parameters for installing the package
+        $params = Get-RegValue "HKLM:\SOFTWARE\Policies\Chocolatey\Packages" $_
+        
+        # List all installed packages
+        $packageList = choco list --local-only
+        
+        # Should we remove the package?
+        if ($params -eq "remove") {
+            
+            # Is the package installed?
+            if ($packageList -match $_ + " ") {
+                Display-StatusMessage "Removing $_..."
+                cuninst $_ -y
+            }
+        
+        # Install or update the package
         } else {
-            Display-StatusMessage "Updating $_..."
-            Call-CMD "cup $_ -y $params"
+        
+            # Is the package installed?
+            if (!($packageList -match $_ + " ")) {
+                Display-StatusMessage "Installing $_..."
+                cinst $_ -y $params
+            } else {
+                Display-StatusMessage "Updating $_..."
+                cup $_ -y $params
+            }
         }
     }
 }
